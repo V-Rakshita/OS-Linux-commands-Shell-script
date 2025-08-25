@@ -93,7 +93,7 @@ cut -d "|" -f 2 file22
 ## OUTPUT
 ![cutfile222](./img/08-cutfile222.png)
 
-cat < newfile 
+cat > newfile 
 ```
 Hello world
 hello world
@@ -105,7 +105,7 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-
+![grephello](./img/09-grephello.png)
 
 
 grep hello newfile 
