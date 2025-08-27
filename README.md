@@ -110,24 +110,24 @@ grep Hello newfile
 
 grep hello newfile 
 ## OUTPUT
-
+![grep2](./img/10-grep2.png)
 
 
 
 grep -v hello newfile 
 ## OUTPUT
-
+![grep3](./img/11-grep3.png)
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-
+![catnewfile](./img/12-catnewfile.png)
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
-
+![catnewfile2](./img/13-catnewfile2.png)
 
 
 
@@ -138,7 +138,7 @@ grep -R ubuntu /etc
 
 grep -w -n world newfile   
 ## OUTPUT
-
+![grep5](./img/15-grep5.png)
 
 cat < newfile 
 ```
