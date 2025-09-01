@@ -307,7 +307,7 @@ sed -n '2,4{s/^/$/;p}' file23
 sed -n '2,4{s/$/*/;p}' file23
 ![sed16](./img/42-sed16.png)
 
-#Sorting File content
+# Sorting File content
 cat > file21
 ```
 1001 | Ram | 10000 | HR
@@ -334,7 +334,7 @@ uniq file22
 ![uniq1](./img/44-uniq1.png)
 
 
-#Using tr command
+# Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
