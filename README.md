@@ -51,7 +51,7 @@ cat < file2
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- ![cmp file1 file2](./img/03-cmpfile1file2.png)
+![cmp file1 file2](./img/03-cmpfile1file2.png)
 comm file1 file2
  ## OUTPUT
 ![commfile1file2](./img/04-commfile1file2.png)
@@ -140,7 +140,7 @@ grep -w -n world newfile
 ## OUTPUT
 ![grep5](./img/15-grep5.png)
 
-cat < newfile 
+cat > newfile 
 ```
 Hello world
 hello world
@@ -161,60 +161,60 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+![egrep](./img/16-egrep.png)
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+![egrep2](./img/17-egrep2.png)
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+![egrep3](./img/18-egrep3.png)
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+![egrep4](./img/19-egrep4.png)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
+![egrep5](./img/20-egrep5.png)
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+![egrep6](./img/21-egrep6.png)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
+![egrep7](./img/22-egrep7.png)
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
+![egrep8](./img/23-egrep8.png)
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+![egrep9](./img/24-egrep9.png)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+![egrep10](./img/25-egrep10.png)
 
 egrep l{2} newfile
 ## OUTPUT
-
+![egrep11](./img/26-egrep11.png)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+![egrep12](./img/27-egrep12.png)
 
 cat > file23
 ```
