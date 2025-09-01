@@ -363,10 +363,12 @@ cat urllist.txt | tr -d ' ' | tr -s '.'
 ![cattr3](./img/47-cattr3.png)
 
 
-#Backup commands
+# Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
+![tar1](./img/48-tar1.png)
 
+![tar2](./img/49-tar2.png)
 
 mkdir backupdir
  
@@ -376,15 +378,17 @@ cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-
+![tar3](./img/50-tar3.png)
 
 tar -xvf backup.tar
 ## OUTPUT
+![tar4](./img/51-tar4.png)
 
 gzip backup.tar
 
-ls .gz
+ls *.gz
 ## OUTPUT
+ ![gz1](./img/52-gz1.png) 
  
 gunzip backup.tar.gz
 ## OUTPUT
