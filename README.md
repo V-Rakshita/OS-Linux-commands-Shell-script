@@ -318,7 +318,7 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
-
+![sort1](./img/43-sort1.png)
 
 cat > file22
 ```
@@ -331,15 +331,16 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-
+![uniq1](./img/44-uniq1.png)
 
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+![cattr1](./img/45-cattr1.png)
 
-cat < urllist.txt
+cat > urllist.txt
 ```
 www. yahoo. com
 www. google. com
@@ -354,12 +355,12 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
-
+![cattr2](./img/46-cattr2.png)
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
+![cattr3](./img/47-cattr3.png)
 
 
 #Backup commands
