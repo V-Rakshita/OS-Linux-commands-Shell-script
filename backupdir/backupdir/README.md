@@ -378,33 +378,31 @@ cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-![tar7](./img/54-tar7.png)
-![tar8](./img/55-tar8.png)
+
 
 tar -xvf backup.tar
 ## OUTPUT
-![tar9](./img/56-tar9.png)
-![tar10](./img/57-tar10.png)
+
 
 gzip backup.tar
 
 ls *.gz
 ## OUTPUT
-![gz1](./img/58-gz1.png)
+
  
 gunzip backup.tar.gz
 ## OUTPUT
-![gz2](./img/59-gz2.png)
+
  
 # Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
-echo 'echo Hello World'; exit 0 >> my-script.sh
+echo 'echo Hello World‘; exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-![shscript1](./img/60-shscript1.png)
+
  
 cat << stop > herecheck.txt
 ```
@@ -416,7 +414,7 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-![shscript2](./img/61-shscript2.png)
+
 
 cat < scriptest.sh 
 ```bash
@@ -454,26 +452,29 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-![shscript3](./img/62-shscript3.png)
+
  
 ls file1
 ## OUTPUT
-![shscript4](./img/63-shscript4.png)
 
 echo $?
 ## OUTPUT 
-![shscript5](./img/64-shscript5.png)
+./one
+bash: ./one: Permission denied
+ 
+echo $?
+## OUTPUT 
  
 abcd
  
 echo $?
  ## OUTPUT
-![shscript6](./img/65-shscript6.png)
+
 
  
 # mis-using string comparisons
 
-cat > strcomp.sh 
+cat < strcomp.sh 
 ```bash
 \#!/bin/bash
 val1=baseball
@@ -499,18 +500,18 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
-## OUTPUT
-![catcomm](./img/66-catcomm.png)
+##OUTPUT
+
 
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-![shscript7](./img/67-shscript7.png)
+
 
 # check file ownership
-cat > psswdperm.sh 
+cat < psswdperm.sh 
 ```bash
 \#!/bin/bash
 if [ -O /etc/passwd ]
@@ -534,7 +535,6 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
-![shscript8](./img/68-shscript8.png)
 
 # check if with file location
 cat>ifnested.sh 
@@ -581,7 +581,7 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
-![shscript9](./img/69-shscript9.png)
+
 
 
 # using numeric test comparisons
@@ -624,11 +624,10 @@ fi
 $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
-## OUTPUT
-![scriptsh10](./img/70-scriptsh10.png)
+##OUTPUT
 
 # check if a file
-cat > ifnested2.sh 
+cat > ifnested.sh 
 ```bash
 \#!/bin/bash
 if [ -e $HOME ]
@@ -650,7 +649,7 @@ fi
 ^d
 ```
 
-cat ifnested2.sh 
+cat ifnested.sh 
 ```bash
 \#!/bin/bash
 if [ -e $HOME ]
@@ -671,11 +670,10 @@ echo “Sorry, the object does not exist”
 fi
 ```
 
-$ chmod 755 ifnested2.sh
+$ chmod 755 ifnested.sh
  
-$ ./ifnested2.sh 
-## OUTPUT
-![scriptsh11](./img/71-scriptsh11.png)
+$ ./ifnested.sh 
+##OUTPUT
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -704,7 +702,7 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-![scriptsh12](./img/72-scriptsh12.png)
+
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -720,7 +718,6 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
-![scriptsh13](./img/73-scriptsh13.png)
 
 # using the case command
 cat >casecheck.sh 
@@ -741,9 +738,6 @@ $ chmod 755 casecheck.sh
  
 $ ./casecheck.sh 
  
-## OUTPUT
-![scriptsh14](./img/74-scriptsh14.png)
-
 cat > whiletest
 ```bash
 #!/bin/bash
@@ -758,8 +752,7 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
-## OUTPUT
-![scriptsh15](./img/75-scriptsh15.png) 
+ 
  
 cat untiltest.sh 
 ```bash
@@ -772,10 +765,7 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
-$ ./untiltest.sh
-
-## OUTPUT
-![scriptsh16](./img/76-scriptsh16.png)
+ 
  
  
 cat forin1.sh 
@@ -789,12 +779,9 @@ done
  ```
  
 $ chmod 755 forin1.sh
-$ ./forin1.sh
-
-## OUTPUT
-![scriptsh17](./img/77-scriptsh17.png)
  
-cat > forin2.sh 
+ 
+cat forin2.sh 
 ```bash
 \#!/bin/bash
 \# another example of how not to use the for command
@@ -803,7 +790,9 @@ do
 echo “word:$test”
 done
  ```
-
+ 
+$ chmod 755 forin2.sh
+ 
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -817,9 +806,6 @@ $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
  
-## OUTPUT
-![scriptsh18](./img/78-scriptsh18.png)
-
 cat forin3.sh 
 ```bash
 \#!/bin/bash
