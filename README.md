@@ -830,19 +830,8 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
- 
-cat forin1.sh 
-```bash
-#!/bin/bash
-# basic for command
-for test in Alabama Alaska Arizona Arkansas California Colorado
-do
-echo The next state is $test
-done
-```
-$ chmod 755 forin1.sh
+ ![scriptsh19](./img/79-scriptsh19.png)
 
-## OUTPUT
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -854,7 +843,7 @@ echo "Visit beautiful $file“
 done
 ```
 $ chmod 777 forinfile.sh
-$ cat cities
+$ cat > cities
 Hyderabad
 Alampur
 Basara
@@ -864,7 +853,7 @@ Bhadrachalam
 Khammam
 
 ## OUTPUT
-
+![scriptsh20](./img/80-scriptsh20.png)
 
 cat forctype.sh 
 ```bash
@@ -878,8 +867,9 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
+![scriptsh21](./img/81-scriptsh21.png)
 
-cat forctype1.sh 
+cat > forctype1.sh 
 ```bash
 #!/bin/bash
 # multiple variables
@@ -891,8 +881,9 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+![scriptsh22](./img/82-scriptsh22.png)
 
-cat fornested1.sh 
+cat > fornested1.sh 
 ```bash
 #!/bin/bash
 # nesting for loops
@@ -909,7 +900,7 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-
+![scriptsh23](./img/83-scriptsh23.png)
  
 cat forbreak.sh 
 ```bash
@@ -926,12 +917,9 @@ done
 echo "The for loop is completed“
 ```
 ## OUTPUT
-
-$ chmod 755 forbreak.sh
+![scriptsh24](./img/84-scriptsh24.png)
  
-$ ./forbreak.sh 
- 
-cat forbreak.sh 
+cat forcontinue.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -945,14 +933,13 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-
- 
 $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
-cat exread.sh 
+ ![scriptsh25](./img/85-scriptsh25.png)
+
+cat > xread.sh 
 ```bash
 #!/bin/bash
 # testing the read command
@@ -961,10 +948,11 @@ read name
 echo "Hello $name, welcome to my program. "
  ```
  
-$ chmod 755 exread.sh 
+$ chmod 755 xread.sh 
  
-$ ./exread.sh 
+$ ./xread.sh 
 ## OUTPUT
+![scriptsh26](./img/86-scriptsh26.png)
 
 
  cat exread1.sh
@@ -977,10 +965,7 @@ echo "Hello $name, welcome to my program. “
 $ chmod 755 exread1.sh 
 
 ## OUTPUT
-
-
-
-$ ./exread1.sh 
+![scriptsh27](./img/87-scriptsh27.png)
  
 cat funcex.sh
 ```bash
@@ -999,10 +984,10 @@ fi
 ```
 ## OUTPUT
  ./funcex.sh 
-
+![scriptsh28](./img/88-scriptsh28.png)
  
  ./funcex.sh 1 2
-
+![scriptsh29](./img/89-scriptsh29.png)
  
 cat argshift.sh
 ```bash
@@ -1013,10 +998,11 @@ cat argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
+$ ./argshift.sh 1 2 3
 
 ## OUTPUT
-$ ./argshift.sh 1 2 3
- 
+![scriptsh30](./img/90-scripsh30.png)
+
  cat argshift1.sh
 ```bash
  #/bin/bash 
@@ -1030,11 +1016,13 @@ for (( i=0;i<$ELEMENTS;i++)); do
     echo ${args[${i}]} 
 done
 ```
-$ chmod 777 argshift.sh
+$ chmod 777 argshift1.sh
+$ ./argshift1.sh 1 2 3
+
 ## OUTPUT
-$ ./argshift.sh 1 2 3
+![scriptsh31](./img/91-scriptsh31.png)
  
-cat argshift.sh
+cat argshift2.sh
 ```bash
 #!/bin/bash 
 set -x 
@@ -1045,7 +1033,7 @@ done
 set +x
 ```
 ## OUTPUT
- ./argshift.sh 1 2 3
+![scriptsh32](./img/92-scriptsh32.png)
  
  
 cat > nc.awk
@@ -1077,7 +1065,8 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ ![scriptsh33](./img/93-scriptsh33.png)
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1104,7 +1093,7 @@ else
 fi
 ```
 ## OUTPUT 
-
+![scriptsh24](./img/94-scriptsh34.png)
 
 # RESULT:
 The Commands are executed successfully.
